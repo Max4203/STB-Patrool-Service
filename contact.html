@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <title>СТБ Патруль-Сервис</title>
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="index.html" class="navbar-brand ms-lg-5">
+            <h1 class="display-5 m-0 text-primary">СТБ<span class="text-secondary"> Патруль-Сервис</span></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Главная</a>
+                <a href="about.html" class="nav-item nav-link">О нас</a>
+                <a href="service.html" class="nav-item nav-link">Услуги</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Остальное</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="price.html" class="dropdown-item">Прайс-лист</a>
+                        <a href="blog.html" class="dropdown-item">Наши Новости</a>
+                        <a href="team.html" class="dropdown-item">Сотрудники</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link active">Контакты</a>
+                <a href="login.php" class="nav-item nav-link"><img src="img/login.jpg" alt=""></a>
+                <a href="tel:+123456789" class="nav-item nav-link nav-contact bg-secondary text-white px-5 ms-lg-5"><i class="bi bi-telephone-outbound me-2"></i>+7(950)-456-74-08</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid p-5 hero-header mb-5" 
+     style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+             url('img/kontakty.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h1 class="display-1 text-white animated zoomIn">Контакты</h1>           
+        </div>
+    </div>
+</div>
+    <!-- Hero End -->
+
+
+    <!-- Contact Start -->
+    <div class="map" id="map"></div>  <!-- Контейнер для карты -->
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script>
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [54.949482, 73.379594], // Координаты центра карты (пример: Омск)
+                zoom: 17,
+                controls: ['zoomControl', 'typeSelector'] // Управление на карте
+            });
+
+            var myPlacemark = new ymaps.Placemark([54.949482, 73.379594], {
+                balloonContent: "<strong>Главный офис</strong><br>" +
+                                "Адрес: г. Омск, ул. Иртышская Набережная, д.37<br>" +
+                                "Время работы: Пн-Пт, 9:00 - 18:00<br>" +
+                                "Телефон: +7 (312) 56-78-90<br>" +
+                                "Почтовый ящик: stb_patrol-service@mail.ru"
+            }, {
+                preset: 'islands#icon', // Настройка внешнего вида метки
+                iconColor: '#0095b6' // Цвет метки
+            });
+
+            myMap.geoObjects.add(myPlacemark); // Добавляем плашку на карту
+            
+            // Открываем балун сразу при загрузке
+            myPlacemark.balloon.open();
+        }
+    </script>
+    <h2>Охранное предприятие «CТБ Патруль-Сервис» в Омской области</h2>
+    <div class="contact-box">
+      <div class="contact">
+          <h4>Рабочий посёлок Горьковское</h4>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: улица Максима Горького, д.42 </p>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> Городской телефон: +7 (312) 56-78-90</p>
+          <p><i class="fa fa-mobile" aria-hidden="true"></i> Сотовый телефон: +7 (913) 784-01-45</p>
+      </div>
+      <div class="contact">
+          <h4>Рабочий посёлок Саргатское</h4>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: Советская улица, д.114 </p>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> Городской телефон: +7 (312) 80-17-33</p>
+          <p><i class="fa fa-mobile" aria-hidden="true"></i> Сотовый телефон: +7 (950) 466-21-74</p>
+      </div>
+      <div class="contact">
+          <h4>Село Осокино</h4>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: Южная улица, д.22 </p>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> Городской телефон: +7 (312) 37-82-65</p>
+          <p><i class="fa fa-mobile" aria-hidden="true"></i> Сотовый телефон: +7 (913) 741-09-88</p>
+      </div>
+  </div>
+</div>
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">Форма обратной связи</h5>
+                <h1 class="display-5 mb-0">Пишите нам, всегда готовы вам помочь</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-7 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-light rounded p-5">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <input type="text" class="form-control border-0 px-4" placeholder="Ваше имя" style="height: 55px;">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control border-0 px-4" placeholder="Ваш Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control border-0 px-4" placeholder="Тема сообщения" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control border-0 px-4 py-3" rows="8" placeholder="Ваше сообщение"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="bg-light rounded p-5">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h5 class="mb-1">Наш главный офис</h5>
+                                <span>Омск, Иртышская набережная 37</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h5 class="mb-1">Наша почта</h5>
+                                <span>stb_patrool-service@mail.ru</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h5 class="mb-1">Наш телефон</h5>
+                                <span>+7 (312) 56-78-90</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="position-relative h-100">
+                                <iframe class="position-absolute w-100 h-100" style="object-fit: cover;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                                frameborder="0" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container pt-5">
+            <div class="row g-5">
+                
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Быстрые ссылки</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Главная</a>
+                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>О нас</a>
+                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Наши услуги</a>
+                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Последние новости</a>
+                        <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Свяжитесь с нами</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Наши контакты</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Омск, Иртышская набережная 37</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stb_patrool-service@mail.ru</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>++7 (312) 56-78-90</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Наши Соцсети</h3>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-vk fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-telegram fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <form class="mx-auto" style="max-width: 600px;">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Ваш Email">
+                            <button class="btn btn-primary px-4">Связаться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-primary text-light py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">СТБ Патруль-Сервис</a>. 2007-2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-secondary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
